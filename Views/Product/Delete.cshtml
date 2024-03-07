@@ -1,0 +1,61 @@
+﻿@model Product
+
+@{
+	ViewData["Title"] = "Delete Product";
+}
+
+<div class="card">
+	<div class="card-header">
+		<h5 class="card-title">Delete Products</h5>
+	</div>
+	<div class="card-body">
+		<div class="col-md-12">
+			<form asp-action="Delete">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+				<input type="hidden" asp-action="Id" />
+				<div class="form-group">
+					<label asp-for="ProductName" class="control-label"></label>
+					<input asp-for="ProductName" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="Manufacturer" class="control-label"></label>
+					<input asp-for="Manufacturer" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label class="control-label">CategoryName</label>
+					<select asp-for="CetegoryId" class="form-control" asp-items="ViewBag.Categories" disabled>
+						<option value="">--Select Category--</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label asp-for="Price" class="control-label"></label>
+					<input asp-for="Price" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="Quantity" class="control-label"></label>
+					<input asp-for="Quantity" class="form-control" readonly />
+				</div>
+				<div class="form-group">
+					<label asp-for="Description" class="control-label"></label>
+					<input asp-for="Description" class="form-control" readonly />
+				</div>
+
+				<div class="form-group mt-3">
+					<input type="submit" value="Delete" class="btn btn-danger" />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index"> <i class="fa fa-arrow-left"></i> Back to List </a>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
+

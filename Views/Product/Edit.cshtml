@@ -1,0 +1,68 @@
+﻿@model Product
+
+@{
+	ViewData["Title"] = "Update Product";
+}
+
+<div class="card">
+	<div class="card-header">
+		<h5 class="card-title">Update Products</h5>
+	</div>
+	<div class="card-body">
+		<div class="col-md-12">
+			<form asp-action="Edit">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+				<input type="hidden" asp-action="Id" />
+				<div class="form-group mt-2">
+					<label asp-for="ProductName" class="control-label"></label>
+					<input asp-for="ProductName" class="form-control" />
+					<span asp-validation-for="ProductName" class="text-danger"></span>
+				</div>
+				<div class="form-group mt-2">
+					<label asp-for="Manufacturer" class="control-label"></label>
+					<input asp-for="Manufacturer" class="form-control" />
+					<span asp-validation-for="Manufacturer" class="text-danger"></span>
+				</div>
+				<div class="form-group mt-2">
+					<label class="control-label">CategoryName</label>
+					<select asp-for="CetegoryId" class="form-control" asp-items="ViewBag.Categories">
+						<option value="">--Select Category--</option>
+					</select>
+					<span asp-validation-for="CetegoryId" class="text-danger"></span>
+				</div>
+				<div class="form-group mt-2">
+					<label asp-for="Price" class="control-label"></label>
+					<input asp-for="Price" class="form-control" />
+					<span asp-validation-for="Price" class="text-danger"></span>
+				</div>
+				<div class="form-group mt-2">
+					<label asp-for="Quantity" class="control-label"></label>
+					<input asp-for="Quantity" class="form-control" />
+					<span asp-validation-for="Quantity" class="text-danger"></span>
+				</div>
+				<div class="form-group mt-2">
+					<label asp-for="Description" class="control-label"></label>
+					<input asp-for="Description" class="form-control" />
+					<span asp-validation-for="Description" class="text-danger"></span>
+				</div>
+
+				<div class="form-group mt-3 mt-2">
+					<button type="submit" value="Update" class="btn btn-primary btn-sm edit-btn"><i class="fa fa-pen-nib"></i> Update</button>
+					@* <input type="submit" value="Update" class="btn btn-primary btn-sm edit-btn" /> *@
+					<a asp-action="Index">
+						<i class="fa fa-arrow-left"></i>
+						Back to List
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
+
