@@ -8264,11 +8264,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Products\\Products.csproj",
+      "projectUniqueName": "D:\\Albums_Koempheak\\Build_Bright_University\\Year3_Semester2\\ASP.Net\\Products\\Products.csproj",
       "projectName": "Products",
-      "projectPath": "D:\\Products\\Products.csproj",
+      "projectPath": "D:\\Albums_Koempheak\\Build_Bright_University\\Year3_Semester2\\ASP.Net\\Products\\Products.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\Products\\obj\\",
+      "outputPath": "D:\\Albums_Koempheak\\Build_Bright_University\\Year3_Semester2\\ASP.Net\\Products\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8358,7 +8358,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
